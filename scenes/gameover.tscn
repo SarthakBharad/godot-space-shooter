@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxshshdn1pt2r"]
+
+[ext_resource type="Script" uid="uid://ci6ctw6r3ugfi" path="res://scenes/gameover.gd" id="1_2mkfd"]
+[ext_resource type="FontFile" uid="uid://bj6i74t4q427f" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="1_dy3ie"]
+[ext_resource type="FontFile" uid="uid://caulbmqgqopl3" path="res://kenney_space-shooter-redux/Bonus/kenvector_future_thin.ttf" id="2_2mkfd"]
+[ext_resource type="AudioStream" uid="uid://btyd4duy4f6i1" path="res://kenney_space-shooter-redux/Bonus/Hip Hop Intro.mp3" id="4_h8i2o"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mkfd")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.180392, 0.247059, 1)
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -20.0
+offset_right = 46.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="GameOverText" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dy3ie")
+theme_override_font_sizes/font_size = 100
+text = "!!! GAME OVER !!!"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2mkfd")
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="StartAgainText" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dy3ie")
+theme_override_font_sizes/font_size = 25
+text = "PRESS SPACE TO START AGAIN"
+horizontal_alignment = 1
+
+[node name="GameOverMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_h8i2o")
+autoplay = true

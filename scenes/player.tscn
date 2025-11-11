@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6culji4mri"]
+
+[ext_resource type="Texture2D" uid="uid://dy0ma16wi0r4y" path="res://kenney_space-shooter-redux/PNG/Ships/playerShip1_green.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ry5u6dot57lq" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://dwxwtxoog6tsb" path="res://kenney_space-shooter-redux/Bonus/sfx_laser1.ogg" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://biaa6aouc54kc" path="res://kenney_space-shooter-redux/Bonus/sfx_shieldDown.ogg" id="4_dqkch"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("1_g2els")
+
+[node name="PlayerAvatar" type="Sprite2D" parent="."]
+texture = ExtResource("1_3vyb7")
+
+[node name="PlayerCollisionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, -37, 8, -37, 12, -12, 36, 2, 41, 0, 44, -6, 49, -6, 47, 23, 44, 24, 41, 20, 36, 23, 14, 27, 8, 37, -8, 37, -13, 27, -36, 23, -42, 20, -42, 24, -46, 25, -49, -4, -45, -6, -43, -1, -36, 2, -11, -12)
+
+[node name="LaserMarker" type="Marker2D" parent="."]
+position = Vector2(0, -75)
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qhqgy")
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

@@ -1,0 +1,224 @@
+[gd_scene load_steps=14 format=3 uid="uid://8nt8jhwd7k1i"]
+
+[ext_resource type="PackedScene" uid="uid://b6culji4mri" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://dx1wotps5l2uf" path="res://scenes/level.gd" id="1_mx8sn"]
+[ext_resource type="Texture2D" path="res://kenney_space-shooter-redux/Backgrounds/blue.png" id="2_2r41h"]
+[ext_resource type="Texture2D" path="res://kenney_space-shooter-redux/PNG/Effects/star1.png" id="4_2r41h"]
+[ext_resource type="Texture2D" path="res://kenney_space-shooter-redux/PNG/Effects/star2.png" id="5_klq6b"]
+[ext_resource type="Texture2D" path="res://kenney_space-shooter-redux/PNG/Effects/star3.png" id="6_b121j"]
+[ext_resource type="PackedScene" uid="uid://cpmwlpq5eglsr" path="res://scenes/userinterface.tscn" id="7_klq6b"]
+[ext_resource type="AudioStream" path="res://kenney_space-shooter-redux/Bonus/Archetype.mp3" id="8_b121j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8frs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2r41h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_klq6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b121j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(100, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(100, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppgk2"]
+size = Vector2(1920, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r41h"]
+size = Vector2(1920, 100)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_mx8sn")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(959, 541.5)
+scale = Vector2(7.63281, 4.32422)
+texture = ExtResource("2_2r41h")
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StarAvatar1" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar2" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar3" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar4" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar5" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar6" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar7" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar8" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar9" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar10" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar11" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar12" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar13" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar14" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar15" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar16" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar17" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar18" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar19" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar20" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar21" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar22" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar23" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar24" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar25" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar26" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar27" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar28" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar29" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="StarAvatar30" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_w8frs")
+autoplay = "default"
+
+[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+
+[node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBodyRight" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="Borders/StaticBodyRight"]
+position = Vector2(1920, 540)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBodyLeft" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="Borders/StaticBodyLeft"]
+position = Vector2(0, 540)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBodyUp" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShapeUp" type="CollisionShape2D" parent="Borders/StaticBodyUp"]
+position = Vector2(960, 0)
+shape = SubResource("RectangleShape2D_ppgk2")
+
+[node name="StaticBodyDown" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShapeDown" type="CollisionShape2D" parent="Borders/StaticBodyDown"]
+position = Vector2(960, 1080)
+shape = SubResource("RectangleShape2D_2r41h")
+
+[node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Lasers" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("7_klq6b")]
+
+[node name="GameMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_b121j")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
